@@ -1,0 +1,271 @@
+/* ------------------------------------------------------
+   FONT IMPORT
+   Jeg importerer min egen skrifttype, så jeg kan bruge den i overskriften
+------------------------------------------------------ */
+@font-face {
+  font-family: 'FreshMarker';
+  src: url('freshmarker.ttf') format('truetype');
+}
+
+/* ------------------------------------------------------
+   GLOBAL STYLING
+   Grundopsætning for hele siden – nulstiller margin/padding
+   og vælger standard font og farver
+------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* gør bredder nemme at styre */
+  font-family: Arial, Helvetica, sans-serif; /* standard skrift */
+}
+
+body {
+  background-color: #003257; /* hovedbaggrund */
+  color: #7AC8D3;            /* standard tekstfarve */
+  line-height: 1.6;          /* giver luft mellem linjer */
+}
+
+/* ------------------------------------------------------
+   NAVIGATION
+   Menuen øverst på siden med links til de andre sider
+------------------------------------------------------ */
+.topnav {
+  display: flex;                /* gør det nemt at ligge links på række */
+  justify-content: flex-end;    /* placerer menuen til højre */
+  background-color: #003257;
+  padding: 0 20px;
+}
+
+.topnav a {
+  text-decoration: none; /* fjerner understregning */
+  color: #7AC8D3;        /* tekstfarve på links */
+  padding: 20px;         /* klik-område */
+  font-size: 18px;       /* større tekst i menu */
+}
+
+.topnav a:hover {
+  background-color: #FFA9F8; /* hover-effekt */
+  color: #190514;
+}
+
+/* ------------------------------------------------------
+   HERO SECTION (Forside-intro)
+------------------------------------------------------ */
+.hero {
+  text-align: center;
+  padding: 120px 20px;         /* stor afstand for et flot introlook */
+  background-color: #003257;
+}
+
+/* Overskriften med specialfont */
+.hero h1 {
+  font-family: 'FreshMarker', Arial, sans-serif; /* bruger min egen font */
+  font-size: 290px;                              /* stor grafisk titel */
+  color: #FFA9F8;                                 /* kontrastfarve */
+  margin-top: 50px;
+}
+
+/* Underteksten under overskriften */
+.hero .subtitle {
+  font-size: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #7AC8D3;
+  text-align: right;      /* placerer tekst mod højre */
+  margin-right: 100px;    /* trækker den længere ind */
+  margin-top: -90px;      /* flytter den op mod overskriften */
+}
+
+/* ------------------------------------------------------
+   FADE-IN ANIMATION
+   Gør at tekst glider stille ind på skærmen
+------------------------------------------------------ */
+.fade-in {
+  opacity: 0; /* starter usynlig */
+  animation: fadeIn 2s ease-in forwards; /* styrer animationen */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* starter lidt nede */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* ender på normal placering */
+  }
+}
+
+/* ------------------------------------------------------
+   SECTIONS
+   Styling til indholdsområder på undersider
+------------------------------------------------------ */
+section {
+  padding: 60px 20px;
+  max-width: 1000px; /* gør linjer nemmere at læse */
+  margin: auto;      /* centrerer sektionerne */
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ------------------------------------------------------
+   CONTACT FORM
+   Styling af formularen på contact-siden
+------------------------------------------------------ */
+/* ---------- CONTACT FORM ---------- */
+.contact-section {
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: center;
+  background-color: #00243b; /* mørkere blå baggrund */
+  padding: 20px 30px; /* luft rundt om indholdet */
+  border-radius: 20px; /* runde hjørner på hele boksen */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* mere luft mellem felterne */
+  margin-top: 20px;
+}
+
+/* Inputfelter og message-boks */
+.contact-form input,
+.contact-form textarea {
+  background: none; /* ingen baggrundsfarve */
+  border: 2px solid #7AC8D3; /* lys kant */
+  border-radius: 12px; /* runde hjørner */
+  padding: 12px;
+  font-size: 16px;
+  color: #7AC8D3; /* lys tekst i felterne */
+}
+
+/* Placeholder tekstfarve */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7AC8D3;
+  opacity: 0.6; /* gør den lidt svagere */
+}
+
+/* Message felt */
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Kontakt-knap */
+.contact-form button {
+  background-color: #7AC8D3; /* lys knap */
+  color: #003257; /* mørk tekst */
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #FFA9F8;
+  color: #190514;
+}
+
+
+/* ------------------------------------------------------
+   FOOTER
+   Nedre del af siden med kontakt, logo og sociale medier
+------------------------------------------------------ */
+.footer {
+  background-color: #003257;
+  color: #7AC8D3;
+  display: flex;               /* tre kolonner ved siden af hinanden */
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  border-top: 1px solid #7AC8D3; /* streg over footeren */
+
+
+}
+
+.footer-left,
+.footer-right {
+  width: 50%; /* hver del fylder en tredjedel */
+}
+
+
+.footer-right {
+  text-align: right; /* højrejusterer sociale medier */
+  padding-right: 20px;
+}
+
+.footer-right p {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* align ikoner til tekst baseline */
+  gap: 12px;
+}
+
+
+.social-icon {
+  width: 30px; /* størrelse på ikoner */
+  margin-right: 10px; /* afstand mellem ikoner */
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE DESIGN (Til mobil og tablet)
+   Tilpasser layoutet på små skærme
+------------------------------------------------------ */
+
+/* Footer mobil-version */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* kolonner bliver rækker */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%; /* fuld bredde på mobil */
+    padding: 0;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
+/* Navigation mobil-version */
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .topnav a {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+/* ---------- HERO RESPONSIVE OVERSKRIFT ---------- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 120px; /* mindre overskrift på mobil */
+    margin-top: 20px; /* lidt mindre luft */
+  }
+
+  .hero .subtitle {
+    font-size: 20px;  /* tilpas undertekst */
+    margin-top: -40px;
+    margin-right: 0;  /* centrér hvis det ser bedre ud */
+    text-align: center;
+  }
+}

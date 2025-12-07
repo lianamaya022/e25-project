@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- Jeg bruger HTML5-standard til min hjemmeside -->
+<html>
+<head>
+    <title>Præsentationsportfolio</title> <!-- Navnet på min hjemmeside, vises i browserfanen -->
+
+    <meta charset="UTF-8"> <!-- Sørger for at æ, ø og å samt specialtegn vises korrekt -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Gør siden responsiv, så den tilpasser sig mobiler, tablets og computere -->
+
+    <link rel="stylesheet" type="text/css" href="Forside.css">
+    <!-- Her forbinder jeg min HTML med min CSS-fil, så styling fra Forside.css bruges på hele siden -->
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<!-- Jeg bruger en <div> som en beholder til min menu -->
+<!-- class="topnav" gør, at jeg kan style menuen i CSS -->
+<div class="topnav">
+    <!-- <a> er links til mine andre sider -->
+    <a href="index.html">Home</a> <!-- Link til forsiden -->
+    <a href="about.html">About Me</a> <!-- Link til min præsentationsside -->
+    <a href="projects.html">Projects</a> <!-- Link til projekter -->
+    <a href="contact.html">Contact</a> <!-- Link til kontaktformular -->
+</div>
+
+<!-- HERO SECTION -->
+<!-- Dette er mit visuelle introområde øverst på siden -->
+<!-- class="hero" gør, at baggrund, tekst og layout kan styles specifikt -->
+<header class="hero">
+
+  <!-- Min store overskrift -->
+  <!-- class="fade-in" giver animation, font og styling fra CSS -->
+  <h1 class="fade-in">Portfolio</h1>
+
+  <!-- Min undertekst, som beskriver min uddannelse/rolle -->
+  <!-- Underteksten er højrestillet og mindre end overskriften -->
+  <p class="subtitle fade-in">Multimedia Design</p>
+</header>
+
+<!-- MAIN CONTENT -->
+<!-- <main> er beregnet til hovedindholdet på siden -->
+<!-- Jeg har ikke indhold her endnu, men kan tilføje sektioner senere -->
+<main>
+    
+</main>
+
+<!-- FOOTER -->
+<!-- Footer er nederst på siden og går igen på alle undersider -->
+<footer class="footer">
+
+    <!-- Venstre kolonne med kontaktinformation -->
+    <div class="footer-left">
+        <h3>Contact</h3>
+        <p>Email: lianamaya022@gmail.com<br>
+        Phone: +45 40 21 94 10</p>
+    </div>
+
+    <!-- Højre kolonne med sociale medier ikoner -->
+    <div class="footer-right">
+        <h3>Social Media</h3>
+        <p>
+            <!-- target="_blank" åbner linket i en ny fane -->
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Facebook.png" alt="Facebook" class="social-icon">
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="Instagram.png" alt="Instagram" class="social-icon">
+            </a>
+        </p>
+    </div>
+
+</footer>
+
+</body>
+</html>
