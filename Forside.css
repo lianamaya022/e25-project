@@ -215,6 +215,55 @@ section h2 {
   width: 30px; /* størrelse på ikoner */
   margin-right: 10px; /* afstand mellem ikoner */
 }
+/* ---------- PROJECTS SECTION ---------- */
+.projects-section {
+  max-width: 1100px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #7AC8D3;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #00243b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-card p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #7AC8D3;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: #003f66;
+}
+
+/* ---------- RESPONSIVE PROJECT GRID ---------- */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ------------------------------------------------------
    RESPONSIVE DESIGN (Til mobil og tablet)
