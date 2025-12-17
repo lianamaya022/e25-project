@@ -1,55 +1,108 @@
 <!DOCTYPE html>
-<html>
+<!-- Jeg bruger HTML5-standarden til min kontaktside -->
+<html lang="en">
+
 <head>
+    <!-- Titel der vises i browserfanen -->
     <title>Contact</title>
+
+    <!-- Sikrer korrekt visning af specialtegn -->
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Forside.css">
+
+    <!-- Gør siden responsiv på mobil og tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Jeg linker til min fælles CSS-fil -->
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
 
-<div class="topnav">
+<!-- ================= NAVIGATION ================= -->
+<!-- Navigationen er ens på alle sider for konsistens -->
+<nav class="topnav">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-</div>
+</nav>
 
 
+<!-- ================= MAIN CONTENT ================= -->
+<!-- main indeholder sidens primære indhold -->
 <main class="contact-section">
-    <h1>Contact Me</h1><br>
-    <p>If you have any questions or would like to get in touch, feel free to send me a message:</p>
 
+    <!-- Overskrift for kontaktsiden -->
+    <h1>Contact Me</h1>
+
+    <!-- Kontaktformular -->
+    <!-- action="#" betyder, at formularen ikke sender data videre endnu -->
     <form class="contact-form" action="#" method="post">
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
+        <!-- Navnefelt -->
+        <!-- required sikrer, at feltet skal udfyldes -->
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+        >
+
+        <!-- Email-felt -->
+        <!-- type="email" sikrer korrekt email-format -->
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your E-mail"
+            required
+        >
+
+        <!-- Besked-felt -->
+        <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            required
+        ></textarea>
+
+        <!-- Submit-knap -->
         <button type="submit">Send Message</button>
+
     </form>
+
 </main>
 
-<!-- Footer -->
+
+<!-- ================= FOOTER ================= -->
+<!-- Footer bruges til kontaktoplysninger og sociale medier -->
 <footer class="footer">
 
+    <!-- Venstre del: kontaktinformation -->
     <div class="footer-left">
         <h3>Contact</h3>
-        <p>Email: lianamaya022@gmail.com<br>
-        Phone: +45 40 21 94 10</p>
-    </div>
-
-    <div class="footer-right">
-        <h3>Social Media</h3>
         <p>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="social-icon">
-            </a>
-
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="instagram.png" alt="Instagram" class="social-icon">
-            </a>
+            E-mail: lianamaya022@gmail.com<br>
+            Phone: +45 40 21 94 10
         </p>
     </div>
 
+    <!-- Højre del: sociale medier -->
+    <div class="footer-right">
+        <h3>Social Media</h3>
+
+        <!-- target="_blank" åbner linket i ny fane -->
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="facebook.png" alt="Facebook" class="social-icon">
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+
 </footer>
+
 </body>
 </html>

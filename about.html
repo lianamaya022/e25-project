@@ -1,42 +1,115 @@
 <!DOCTYPE html>
-<html>
+<!-- Jeg bruger HTML5-standarden til min About Me-side -->
+<html lang="en">
+
 <head>
+    <!-- Titel der vises i browserfanen -->
     <title>About Me</title>
+
+    <!-- Gør det muligt at bruge æ, ø, å og specialtegn -->
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Forside.css">
+
+    <!-- Gør siden responsiv på mobil og tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Jeg forbinder siden med min fælles CSS-fil -->
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
 
-<div class="topnav">
+<!-- ================= NAVIGATION ================= -->
+<!-- Navigationen er den samme på alle sider for ensartet brugeroplevelse -->
+<nav class="topnav">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-</div>
+</nav>
 
-<h1>About Me</h1>
-<p>Here you write about yourself...</p>
 
-<!-- Footer -->
-<footer class="footer">
+<!-- ================= ABOUT ME ================= -->
+<!-- Denne sektion præsenterer hvem jeg er -->
+<section class="about-section">
 
-    <div class="footer-left">
-        <h3>Contact</h3>
-        <p>Email: lianamaya022@gmail.com<br>
-        Phone: +45 40 21 94 10</p>
+    <!-- Jeg bruger flexbox til at placere tekst og billede ved siden af hinanden -->
+    <div class="about-content">
+
+        <!-- Tekst til venstre -->
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+                My name is Liana Eadan, a 23 year old multimedia designer based in Denmark.
+                I specialize in illustration and graphic design, with a strong passion for
+                idea development and visual storytelling.
+                From an early age, I've enjoyed drawing and painting, which naturally led me
+                to pursue a creative career.
+                I'm driven by curiosity and enjoy transforming ideas into expressive,
+                thoughtful visuals that communicate and connect with people.
+            </p>
+        </div>
+
+        <!-- Billede til højre -->
+        <div class="about-image">
+            <img src="about_me_pic.png" alt="Portrait of Liana">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SKILLS & EDUCATION ================= -->
+<!-- Jeg har samlet Education og Skills i én fælles sektion -->
+<section class="skills-education-section">
+
+    <!-- Education (venstre) -->
+    <div class="education-box">
+        <h2>Education</h2>
+        <p>
+            UCL - Multimedia Design<br>
+            2025 - 2027<br><br>
+
+            HF & VUC Fyn<br>
+            2021 - 2023
+        </p>
     </div>
 
+    <!-- Skills (højre) -->
+    <div class="skills-box">
+        <h2>My Skills</h2>
+
+        <!-- Jeg bruger et billede til at vise programmer visuelt -->
+        <img src="programmer.png" alt="My skills" class="skills-image">
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<!-- Footer bruges til kontaktinformation og sociale medier -->
+<footer class="footer">
+
+    <!-- Venstre kolonne -->
+    <div class="footer-left">
+        <h3>Contact</h3>
+        <p>
+            E-mail: lianamaya022@gmail.com<br>
+            Phone: +45 40 21 94 10
+        </p>
+    </div>
+
+    <!-- Højre kolonne -->
     <div class="footer-right">
         <h3>Social Media</h3>
-        <p>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="social-icon">
-            </a>
 
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="instagram.png" alt="Instagram" class="social-icon">
-            </a>
-        </p>
+        <!-- Ikoner linker til sociale medier -->
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="facebook.png" alt="Facebook" class="social-icon">
+        </a>
+
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon">
+        </a>
     </div>
 
 </footer>
