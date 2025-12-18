@@ -25,13 +25,7 @@
 }
 
 body {
-  background-color: #E1DDD4;
-
-  /* Baggrundsbilledet gentages for at skabe papir-effekt */
-  background-image: url("paper.jpg");
-  background-size: 500px 500px;
-  background-repeat: repeat;
-
+  background-color: #F8F3E8;
   color: #190514;
   line-height: 1.6;
   font-family: Arial, Helvetica, sans-serif;
@@ -61,17 +55,14 @@ p, span, li, label, input, textarea {
 .topnav {
   display: flex;
   justify-content: flex-end;
-  background-color: #E1DDD4;
+  background-color: #F8F3E8;
   padding: 0 50px;
-
-  /* Den tynde streg bruges som visuel adskillelse */
-  border-bottom: 1px solid #190514;
 }
 
 .topnav a {
   font-family: 'Cushion', Arial, sans-serif;
   font-size: 20px;
-  color: #191919;
+  color: #190514;
   text-decoration: none;
   padding: 20px;
 }
@@ -82,51 +73,30 @@ p, span, li, label, input, textarea {
 }
 
 /* ------------------------------------------------------
-   HERO
-   Dette er hero-sektionen øverst på forsiden.
-   Jeg bruger padding for at give luft omkring indholdet
+   ABOUT / HERO CONTENT (genbrugt)
 ------------------------------------------------------ */
-.hero {
-  padding: 120px 20px;
-}
 
-/* 
-   Jeg bruger flexbox til at placere tekst og billede
-   ved siden af hinanden og centrere dem både vandret
-   og lodret.
-*/
 .hero-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px; /* Afstand mellem tekst og billede */
+  gap: 80px;
 }
 
-/* 
-   Jeg deler overskriften i to linjer
-*/
 .name-line1,
 .name-line2 {
   font-family: 'FreshMarker', Arial, sans-serif;
   font-size: 100px;
   color: #1264AE;
-  line-height: 0.9; /* Mindre linjeafstand for kompakt look */
+  line-height: 0.9;
 }
 
-/* 
-   Underteksten forklarer kort, hvem jeg er.
-   Jeg begrænser bredden for bedre læsbarhed.
-*/
 .subtitle {
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 30px;
   max-width: 500px;
 }
 
-/* 
-   Hero-billedet får en fast bredde og runde hjørner
-   for at passe til det bløde visuelle udtryk på siden.
-*/
 .hero-image img {
   width: 400px;
   border-radius: 30px;
@@ -134,13 +104,12 @@ p, span, li, label, input, textarea {
 
 /* ------------------------------------------------------
    FADE-IN
-   Jeg bruger en simpel fade-in animation 
 ------------------------------------------------------ */
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
 }
-
 
 @keyframes fadeIn {
   from {
@@ -154,184 +123,87 @@ p, span, li, label, input, textarea {
 }
 
 /* ------------------------------------------------------
-   GENERELLE SECTIONS
-   Jeg giver alle sektioner samme padding for at sikre
-   ens afstand og sammenhæng på hele hjemmesiden.
------------------------------------------------------- */
-section {
-  padding: 60px 20px;
-  margin: auto;
-}
-
-/* ------------------------------------------------------
-   PROJECTS GRID (forside)                        1
------------------------------------------------------- */
-
-/* Jeg laver en container til projektdelen på forsiden.
-   Jeg begrænser bredden, så indholdet ikke bliver for bredt
-   på store skærme, og centrerer sektionen med margin auto */
-.projects-section {
-  max-width: 1100px;
-  margin: 80px auto;
-  text-align: center;
-}
-
-/* Jeg bruger CSS Grid til at vise projekterne i tre kolonner.
-   repeat(3, 1fr) betyder, at alle kolonner får samme bredde */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px; /* Jeg skaber luft mellem hvert projekt */
-}
-
-/* Jeg centrerer indholdet i hvert projektkort */
-.project-card {
-  text-align: center;
-}
-
-/* ENS STØRRELSE FOR BILLEDER */
-/* Jeg sørger for, at alle projektbilleder har samme størrelse,
-   så layoutet ser ensartet og professionelt ud */
-.project-card img {
-  width: 100%;            /* Billedet fylder hele sin container */
-  max-width: 400px;       /* Jeg begrænser maksimal bredde */
-  height: 400px;          /* Fast højde, så alle kort matcher */
-  border-radius: 12px;    /* Bløde hjørner for et mere visuelt udtryk */
-}
-
-/* Jeg giver videoen samme størrelse som billederne,
-   så video-projektet passer visuelt ind med de andre */
-.project-card video {
-  display: block;         /* Sikrer korrekt placering */
-  margin: 0 auto;         /* Centrerer videoen horisontalt */
-  width: 100%;
-  max-width: 400px;
-  height: 400px;
-  object-fit: cover;      /* Videoen beskæres pænt uden at blive forvrænget */
-  border-radius: 12px;
-}
-
-/* Jeg tilføjer lidt luft mellem videoen og teksten under */
-.front-video-text {
-  margin-top: 6px;
-}
-
-/* Jeg justerer størrelsen på teksten under hvert projekt,
-   så den er let at læse og ens på tværs af alle projekter */
-.project-card p {
-  font-size: 20px;
-}
-
-/* ------------------------------------------------------
-   ABOUT                                            2 
-   Dette er min "About Me"-sektion
+   ABOUT ME
 ------------------------------------------------------ */
 .about-section {
-  max-width: 1100px;      /* Jeg begrænser bredden for bedre læsbarhed */
-  margin: 100px auto;     /* Giver luft over og under sektionen og centrerer den */
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 80px 60px;
+  background-color: #EFE9DC;
 }
-
-/* 
-   Jeg bruger flexbox til at placere tekst og billede
-   ved siden af hinanden og centrere dem lodret.
-*/
-.about-content {
-  display: flex;
-  align-items: center;    /* Centrerer tekst og billede lodret */
-  justify-content: center;
-  gap: 80px;              /* Afstand mellem tekst og billede */
-}
-
-/* 
-   Tekstboksen har en max-width, så teksten ikke bliver
-   for bred og dermed sværere at læse.
-*/
-.about-text {
-  max-width: 500px;
-}
-
-/* 
-   Overskriften
-*/
-.about-text h1 {
-  font-size: 70px;
-  margin-bottom: 20px;    /* Luft mellem titel og brødtekst */
-}
-
-/* 
-   Brødteksten 
-*/
-.about-text p {
-  font-size: 20px;
-}
-
-/* 
-   Billedet får en fast bredde og runde hjørner
-*/
-.about-image img {
-  width: 350px;
-  border-radius: 20px;
-}
-
 /* ------------------------------------------------------
    SKILLS + EDUCATION
 ------------------------------------------------------ */
 .skills-education-section {
-  max-width: 1100px;      /* Samme bredde som About for visuel sammenhæng */
-  margin: 120px auto;     /* Ekstra plads */
-  display: flex;          /* Flexbox bruges til to kolonner */
-  gap: 80px;              /* Afstand mellem Skills og Education */
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 80px 60px;
+  display: flex;
+  gap: 80px;
+  background-color: #EFE9DC;
 }
 
-/* 
-   Begge bokse fylder halvdelen af bredden,
-   så indholdet er visuelt balanceret.
-*/
 .skills-box,
 .education-box {
   width: 50%;
-  padding-left: 70px;     /* Rykker tekst lidt ind fra venstre */
+  padding-left: 70px;
 }
 
-/* 
-   Billedet med programmer får en fast bredde
-*/
 .skills-image {
   width: 220px;
   display: block;
-  margin-left: 5px;       /* Finjustering af billedets placering */
+  margin-left: 5px;
 }
 
-/* 
-   Teksten under Education får ekstra
-   linjeafstand
-*/
 .skills-box p,
 .education-box p {
   font-size: 20px;
   line-height: 1.8;
 }
-
 /* ------------------------------------------------------
-   INDIVIDUELLE PROJEKTER                   3 
+   PROJECTS – FORSIDE
+------------------------------------------------------ */
+.projects-section {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 80px 60px;
+  background-color: #EFE9DC;
+  text-align: center;
+}
+
+.projects-header {
+  margin-bottom: 30px;
+}
+
+.projects-link {
+  font-family: 'Cushion', Arial, sans-serif;
+  font-size: 18px;
+  color: #190514;
+  text-decoration: none;
+}
+
+.projects-link:hover {
+  text-decoration: underline;
+}
+/* ------------------------------------------------------
+   PROJECTS – FÆLLES OPSÆTNING
 ------------------------------------------------------ */
 
-/* Jeg rykker overskriften "Projects" mod højre, så den er i centrum */
+/* Sideoverskrift */
 .projects-title {
-  margin-left: 600px;
-  margin-top: 0px;
+  text-align: center;
+  margin: 100px 0;
 }
 
-/* Jeg laver en fælles wrapper til hvert projekt,
-   så alle projekter får samme bredde og afstand */
+/* Kasse omkring hvert projekt */
 .project-section {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 20px;
+  margin: 120px auto;          /* afstand mellem kasser */
+  padding: 80px 60px;          /* luft inde i kassen */
+  background-color: #EFE9DD;
 }
 
-/* Jeg bruger flexbox til at placere tekst til venstre
-   og billede/video til højre */
+/* Layout: tekst + billede */
 .project-content {
   display: flex;
   align-items: center;
@@ -339,13 +211,22 @@ section {
   gap: 80px;
 }
 
-/* Jeg begrænser tekstens bredde,
-   så linjerne ikke bliver for lange at læse */
+/* Tekst */
 .project-text {
   max-width: 500px;
 }
 
-/* Standard-størrelse på projektbilleder */
+.project-text h2 {
+  font-size: 55px;
+  margin-bottom: 16px;
+}
+
+.project-text p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Billeder */
 .project-media img {
   width: 500px;
   height: 500px;
@@ -353,109 +234,52 @@ section {
   border-radius: 12px;
 }
 
-/* Titel i hvert projekt */
-.project-text h2 {
-  font-size: 55px;
-  margin-bottom: 16px;
-}
-
-/* Brødtekst under projekt-titlen */
-.project-text p {
-  font-size: 20px;
-  line-height: 1.6;
-}
-
 /* ------------------------------------------------------
-   PROJEKT 1 – individuel styling
+   INDIVIDUELLE PROJEKTER
 ------------------------------------------------------ */
 
-/* Jeg giver projekt 1 sin egen farve på titlen */
-.project-1 h2 {
-  color: #e70909;
-}
-
-/* Jeg justerer billedstørrelsen specifikt for projekt 1 */
+.project-1 h2 { color: #e70909; }
 .project-1 .project-media img {
-  width: 500px;
   height: 600px;
 }
 
-/* ------------------------------------------------------
-   PROJEKT 2 – individuel styling
------------------------------------------------------- */
-
-.project-2 h2 {
-  color: #FF7CBB;
-}
-
+.project-2 h2 { color: #FF7CBB; }
 .project-2 .project-media img {
   width: 400px;
   height: 550px;
 }
 
-/* ------------------------------------------------------
-   PROJEKT 3 – video
------------------------------------------------------- */
-
-
 .project-3 video {
   width: 550px;
   height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
+  border-radius: 20px;
 }
 
-/* ------------------------------------------------------
-   PROJEKT 4
------------------------------------------------------- */
-
-.project-4 h2 {
-  color: #A070FA;
-}
-
+.project-4 h2 { color: #A070FA; }
 .project-4 .project-media img {
   width: 400px;
   height: 550px;
 }
 
-/* ------------------------------------------------------
-   PROJEKT 5
------------------------------------------------------- */
-
-.project-5 h2 {
-  color: #ED85ED;
-}
-
+.project-5 h2 { color: #ED85ED; }
 .project-5 .project-media img {
-  width: 400px;
-  height: 550px;
+  width: 450px;
+  height: 580px;
 }
 
-/* ------------------------------------------------------
-   PROJEKT 6 – galleri
------------------------------------------------------- */
+.project-6 h2 { color: #494649; }
 
-.project-6 h2 {
-  color: #494649;
-}
-
-/* Jeg bruger flexbox til at placere tre billeder ved siden af hinanden */
+/* Galleri */
 .project-gallery {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .project-gallery img {
-  width: 170px;
-  height: 250px;
+  width: 250px;
+  height: 380px;
   object-fit: cover;
   border-radius: 12px;
-}
-
-/* Jeg tilføjer ekstra luft under projekt 6,
-   så siden ikke føles klemt i bunden */
-.project-6 {
-  padding-bottom: 350px;
 }
 
 /* ------------------------------------------------------
@@ -481,7 +305,7 @@ h3 {
 
 
 /* ------------------------------------------------------
-   CONTACT                                      4         
+   CONTACT                                      
 ------------------------------------------------------ */
 
 /* Jeg laver en container til kontaktsektionen,
@@ -531,69 +355,43 @@ h3 {
 /* ------------------------------------------------------
    FOOTER                                     5         
 ------------------------------------------------------ */
-
-/* Jeg bruger flexbox til at placere footerens indhold
-   i to kolonner: kontakt til venstre og sociale medier til højre */
 .footer {
   display: flex;
-  justify-content: space-between; /* Skubber kolonnerne ud til hver side */
-  padding: 40px 20px;             /* Luft omkring footerens indhold */
-  border-top: 1px solid #190514;  /* Tynd streg der adskiller footer fra indhold */
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  border-top: 1px solid #190514;
+  text-align: center;
 }
 
-/* Jeg giver begge kolonner samme bredde,
-   så layoutet er balanceret */
-.footer-left,
-.footer-right {
-  width: 50%;
+.footer-content h3 {
+  font-size: 25px;
 }
 
-/* Jeg højrejusterer indholdet i højre kolonne */
-.footer-right {
-  text-align: right;
-}
-
-/* Jeg styler sociale medie-ikonerne ens,
-   så de har samme størrelse og afstand */
-.social-icon {
-  width: 30px;        /* Ens ikonstørrelse */
-  margin-right: 25px; /* Afstand mellem ikoner */
-  margin-top: 5px;    /* Lille luft over ikonerne */
-}
-
-/* Jeg justerer tekststørrelsen i footeren,
-   så den er let at læse men ikke dominerende */
-.footer p {
+.footer-content p {
   font-size: 18px;
+  margin-top: 10px;
 }
+
 
 /* ------------------------------------------------------
-   RESPONSIVE DESIGN (MOBIL)
+   RESPONSIVE (MOBIL)
 ------------------------------------------------------ */
-
-/* Jeg bruger én samlet media query til mobil,
-   så koden er overskuelig og nem at vedligeholde */
 @media (max-width: 600px) {
 
-  /* ---------- GENERELT LAYOUT ---------- */
-  /* Jeg lægger alle flex-layouts lodret på mobil
-     og centrerer teksten for bedre læsbarhed */
+  /* Lægger alle flex-layouts lodret */
   .hero-content,
-  .about-content,
   .project-content,
   .skills-education-section {
     flex-direction: column;
     text-align: center;
   }
 
-  /* Jeg forhindrer horisontal scrolling på mobil */
   html, body {
     overflow-x: hidden;
   }
 
-  /* ---------- NAVIGATION ---------- */
-  /* Jeg laver menuen lodret på mobil
-     så links er nemme at trykke på */
+  /* Navigation */
   .topnav {
     flex-direction: column;
     align-items: center;
@@ -601,41 +399,26 @@ h3 {
   }
 
   .topnav a {
-    padding: 20px 0;
     font-size: 22px;
   }
 
-  /* ---------- FORSIDE PROJEKT-GRID ---------- */
-  /* Jeg viser kun én kolonne på mobil,
-     så projekterne ikke bliver for små */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* ---------- PROJEKT-SIDE ---------- */
-  /* Jeg fjerner venstre margin på projekttitlen
-     og centrerer den på mobil */
+  /* Projekter */
   .projects-title {
     margin-left: 0;
     text-align: center;
   }
 
-  /* Jeg sikrer at billeder og video aldrig går ud over skærmen */
   .project-media img,
-  .project-card img,
-  .project-card video {
+  .project-media video {
     width: 100%;
-    max-width: 100%;
     height: auto;
   }
 
-  /* ---------- SKILLS & EDUCATION ---------- */
-  /* Jeg lægger Education og Skills under hinanden
-     og centrerer dem på mobil */
-  .skills-education-section {
-    align-items: center;
+  .project-section {
+    margin: 80px 15px;
   }
 
+  /* Skills & education */
   .skills-box,
   .education-box {
     width: 100%;
@@ -646,26 +429,23 @@ h3 {
     margin: 20px auto 0;
   }
 
-  /* ---------- FOOTER ---------- */
-  /* Jeg lægger footer-indhold lodret
-     og centrerer både tekst og ikoner */
-  .footer {
+  /* ---------- VIDEO (PROJECT 3) ---------- */
+  .project-3 video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ---------- GALLERY (PROJECT 6) ---------- */
+  .project-gallery {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 30px;
   }
 
-  .footer-left,
-  .footer-right {
+  .project-gallery img {
     width: 100%;
-    text-align: center;
+    max-width: 300px;
+    height: auto;
   }
 
-  /* Jeg centrerer sociale medier-ikonerne
-     og giver luft imellem dem */
-  .footer-right a {
-    display: inline-block;
-    margin: 0 10px;
-  }
-}
+} 

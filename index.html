@@ -4,7 +4,7 @@
 
 <head>
     <!-- Titel der vises i browserens fane -->
-    <title>Portfolio</title>
+    <title>Liana's Portfolio</title>
 
     <!-- Gør det muligt at bruge æ, ø, å og specialtegn -->
     <meta charset="UTF-8">
@@ -12,137 +12,104 @@
     <!-- Gør siden responsiv på mobil, tablet og desktop -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Jeg forbinder HTML-filen med min CSS, så alt design styres derfra -->
+    <!-- Jeg forbinder HTML-filen med min CSS -->
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
 
 <!-- ================= NAVIGATION ================= -->
-<!-- Jeg bruger en div som container til min menu -->
-<!-- Navigationen ligger øverst og bruges på alle sider -->
+<!-- Navigationen bruges på alle sider -->
 <nav class="topnav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
+    <a href="index.html">About Me</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
 </nav>
 
-
-<!-- ================= HERO / INTRO ================= -->
-<!-- Hero-sektionen fungerer som et visuelt førstehåndsindtryk -->
-<header class="hero">
-
-    <!-- Jeg samler tekst og billede i en flex-container -->
-    <div class="hero-content">
-
-        <!-- Tekst-del med fade-in animation -->
-        <div class="hero-text fade-in">
-            <h1 class="hero-title">
-              <span class="name-line1">Hello!</span><br>
-              <span class="name-line2">I'M Liana</span>
-            </h1>
-
-
-            <!-- Undertekst der forklarer hvem jeg er -->
-            <p class="subtitle">
-                I'm a multimedia designer driven by curiosity, working with illustration, drawing, and graphic design
-                to create expressive visuals.
-            </p>
-        </div>
-
-        <!-- Billede-del i hero -->
-        <div class="hero-image fade-in">
-            <img src="illustration_1.png" alt="Portrait of Liana">
-        </div>
-
-    </div>
-</header>
-
-
 <!-- ================= MAIN CONTENT ================= -->
-<!-- Main indeholder sidens primære indhold -->
+<!-- Alt sidens primære indhold samles i main -->
 <main>
 
-    <!-- ===== PROJECTS SECTION (forside) ===== -->
-    <!-- Jeg viser et overblik over mine projekter i et grid -->
-    <section class="projects-section">
+    <!-- ================= ABOUT ME ================= -->
+    <!-- Denne sektion fungerer som min About Me / hero -->
+    <section class="about-section" id="about">
 
-        <h2>My Projects</h2>
+        <!-- Jeg bruger hero-content, fordi layoutet er
+             defineret i CSS med flexbox -->
+        <div class="hero-content">
 
-        <!-- Grid-container til projekterne -->
-        <div class="projects-grid">
+            <!-- Tekst-del -->
+            <div class="hero-text fade-in">
+                <h1 class="hero-title">
+                    <span class="name-line1">Hello!</span><br>
+                    <span class="name-line2">I'M Liana</span>
+                </h1>
 
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="projekt_1.png" alt="Project 1">
-                <p>Illustrator & Photoshop</p>
+                <p class="subtitle">
+                    My name is Liana Eadan, a 23 year old multimedia designer based in Denmark.
+                    I work within illustration and graphic design, with a strong passion for
+                    idea development and visual storytelling.
+                    From an early age, drawing and painting have been my way of exploring ideas
+                    and expressing creativity, interests that naturally led me towards a creative path.
+                </p>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="projekt_2.png" alt="Project 2">
-                <p>Lightroom & Photoshop</p>
-            </div>
-
-            <!-- Project 3 (video) -->
-            <!-- Jeg bruger video i stedet for billede for at vise bevægelse -->
-            <div class="project-card">
-                <video class="project-video" autoplay muted loop playsinline>
-                    <source src="projekt_3.mp4" type="video/mp4">
-                </video>
-                <p class="front-video-text">After Effects & Photoshop</p>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <img src="projekt_4.png" alt="Project 4">
-                <p>Adobe Illustrator</p>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card">
-                <img src="projekt_5.png" alt="Project 5">
-                <p>Adobe Illustrator</p>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-card">
-                <img src="projekt_6.png" alt="Project 6">
-                <p>Oil Pastels</p>
+            <!-- Billede-del -->
+            <div class="hero-image fade-in">
+                <img src="about_me_pic.png" alt="Portrait of Liana">
             </div>
 
         </div>
     </section>
 
+    <!-- ================= SKILLS & EDUCATION ================= -->
+    <!-- Jeg samler Education og Skills i én fælles sektion -->
+    <section class="skills-education-section">
+
+        <!-- Education -->
+        <div class="education-box">
+            <h2>Education</h2>
+            <p>
+                UCL - Multimedia Design<br>
+                2025 - 2027<br><br>
+                HF & VUC Fyn<br>
+                2021 - 2023
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills-box">
+            <h2>My Skills</h2>
+            <img src="programmer.png" alt="My skills" class="skills-image">
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS LINK ================= -->
+    <!-- Denne sektion linker videre til projektsiden -->
+    <section class="projects-section">
+
+        <div class="projects-header">
+            <h2>My Projects</h2>
+            <a href="projects.html" class="projects-link">
+                View all projects →
+            </a>
+        </div>
+
+    </section>
+
 </main>
 
-
 <!-- ================= FOOTER ================= -->
-<!-- Footer bruges til kontaktoplysninger og sociale medier -->
 <footer class="footer">
 
-    <!-- Venstre del: kontaktinformation -->
+    <!-- Kontaktinformation -->
     <div class="footer-left">
         <h3>Contact</h3>
         <p>
             E-mail: lianamaya022@gmail.com<br>
             Phone: +45 40 21 94 10
         </p>
-    </div>
-
-    <!-- Højre del: sociale medier -->
-    <div class="footer-right">
-        <h3>Social Media</h3>
-
-        <!-- Jeg åbner links i ny fane med target="_blank" -->
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="Facebook.png" alt="Facebook" class="social-icon">
-        </a>
-
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="Instagram.png" alt="Instagram" class="social-icon">
-        </a>
     </div>
 
 </footer>
